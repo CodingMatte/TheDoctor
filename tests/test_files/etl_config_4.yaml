@@ -1,0 +1,15 @@
+etl_config:
+  configs:
+    env: local
+
+  input:
+    local_source: "my_local_path_source"
+    source_format: "csv"
+
+  output:
+    local_destination: "my_local_path_destination"
+    destination_format: "parquet"
+
+  operations:
+    merge_type: "overwrite"
+    transformation_name: "snake_case_column_rename"

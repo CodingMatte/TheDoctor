@@ -1,16 +1,13 @@
 etl_config:
   configs:
-    env: pro
+    env: local
     aws_iam_role: "arn:aws:iam::000000011111:role/my_awesome_iam_role"
 
   input:
-    s3_source_bucket: "my-awesome-bucket"
-    s3_source_path: "spark-fast-etl/input/dummy-dataset-1/"
+    local_source: "my_local_path_source"
     source_format: "csv"
 
   output:
-    s3_destination_bucket: "my-awesome-bucket"
-    s3_destination_prefix: "spark-fast-etl/output/dummy-dataset-1/"
     destination_format: "parquet"
 
   operations:

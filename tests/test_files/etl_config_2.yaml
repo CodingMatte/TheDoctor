@@ -5,7 +5,6 @@ etl_config:
 
   input:
     s3_source_bucket: "my-awesome-bucket"
-    s3_source_path: "spark-fast-etl/input/dummy-dataset-1/"
     source_format: "csv"
 
   output:
