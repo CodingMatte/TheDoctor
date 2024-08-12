@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Generic, TypeVar
+from pyspark.sql import DataFrame
+from pyspark.sql.functions import lit
 
 
 class TransformationConfig:
@@ -16,13 +18,14 @@ B = TypeVar("B", bound=TransformationConfig)
 
 class Transformation(ABC, Generic[B]):
     @abstractmethod
-    def transform(self, config: B) -> None:
+    def transform(self, df: DataFrame, config: B) -> DataFrame:
         pass
 
 
 class SelectExpressionTransformation(
     Transformation[SelectExpressionTransformationConfig]
 ):
-    def transform(self, config: SelectExpressionTransformationConfig):
-        print(config.param)
-        return config.param
+    def transform(
+        self, df: DataFrame, config: SelectExpressionTransformationConfig
+    ) -> DataFrame:
+        return df.withColumn("select_expr", lit(config.param))
