@@ -1,12 +1,8 @@
-import pytest
-from pyspark.sql import SparkSession
-import pyspark
-
 from spark_fast_etl.transformation.transformation import (
     SelectExpressionTransformationConfig,
     SelectExpressionTransformation,
 )
-from tests.utils.SparkUtils import SparkUtils
+from spark_fast_etl.utils.SparkUtils import SparkUtils
 
 
 def test_select_expression_transformation():

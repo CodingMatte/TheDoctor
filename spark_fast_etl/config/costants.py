@@ -23,3 +23,11 @@ class Constants:
     OPERATIONS = "operations"
     MERGE_TYPE = "merge_type"
     TRANSFORMATION = "transformation_name"
+
+    # Formats
+    JSON = "json"
+    CSV = "csv"
+    PARQUET = "parquet"
+
+    # Transformations
+    SELECT_EXPRESSION = "select_expression"
