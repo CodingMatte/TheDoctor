@@ -24,6 +24,12 @@ class Constants:
     MERGE_TYPE = "merge_type"
     TRANSFORMATION = "transformation_name"
 
+    # Environment
+    LOCAL = "local"
+    DEV = "dev"
+    PRE = "pre"
+    PRO = "pro"
+
     # Formats
     JSON = "json"
     CSV = "csv"

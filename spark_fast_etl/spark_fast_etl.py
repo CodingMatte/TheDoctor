@@ -13,7 +13,7 @@ class SparkFastEtl:
 
         return etl_config_content
 
-    # def initialize_engine(self, config_content: dict) -> Engine_Config:
+    # TODO is necessary? def initialize_engine(self, config_content: dict) -> Engine_Config:
 
 
 if __name__ == "__main__":
@@ -31,3 +31,4 @@ if __name__ == "__main__":
     awesome_engine = FastEtlEngine(engine_config)
 
     awesome_engine.execute()
+    awesome_engine.turn_off_engine()

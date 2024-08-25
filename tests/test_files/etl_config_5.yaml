@@ -1,0 +1,15 @@
+etl_config:
+  configs:
+    env: local
+
+  input:
+    local_source: "test_files/dummy_df_1.json"
+    source_format: "json"
+
+  output:
+    local_destination: "test_files/output/transformed_dummy_df_1"
+    destination_format: "parquet"
+
+  operations:
+    merge_type: "overwrite"
+    transformation_name: "select_expression_transformation"
