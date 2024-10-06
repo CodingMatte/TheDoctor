@@ -8,7 +8,7 @@ class SparkUtils:
         self.spark = self._create_spark_session(app_name, master)
 
     @staticmethod
-    def _create_spark_session(self, app_name: str, master: str) -> SparkSession:
+    def _create_spark_session(app_name: str, master: str) -> SparkSession:
         """
         Private method for creating a Spark Session.
         """
